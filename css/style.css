@@ -54,10 +54,6 @@ img {
   max-width: 100%;
 }
 
-section {
-  padding: 100px 0;
-}
-
 .container {
   max-width: 1470px;
   padding: 0 15px;
@@ -76,7 +72,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 0;
+  padding: 15px 0;
 }
 
 .logo__link {
@@ -90,10 +86,14 @@ section {
 
 .hero {
   background: #49424B;
-  background-image: url("../img/hero-bg.png");
-  background-size: contain;
-  background-position: top right;
-  background-repeat: no-repeat;
+}
+
+.hero__inner {
+  display: flex;
+}
+
+.hero__bg {
+  height: 100%;
 }
 
 .hero__content {
@@ -127,12 +127,14 @@ section {
   border-radius: 15px;
   color: #FFFFFF;
   transition: all 0.5s;
+  margin-bottom: 146px;
 }
 
 .servises {
   background-image: url("../img/servises-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
+  padding-top: 100px;
 }
 
 .servises__cards {
@@ -141,11 +143,16 @@ section {
 }
 
 .servises__card {
+  width: 678px;
+  height: 430px;
   display: flex;
+  justify-content: space-between;
+  position: relative;
   background: #82CB5D;
   max-width: 678px;
   min-height: 430px;
-  padding: 36px 35px 53px;
+  padding-left: 35px;
+  padding-top: 35px;
   align-items: start;
   margin-bottom: 40px;
 }
@@ -158,7 +165,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: start;
-  max-width: 415px;
+  max-width: 410px;
 }
 
 .card__title {
@@ -167,7 +174,7 @@ section {
   font-size: 21px;
   line-height: 26px;
   color: #FFFFFF;
-  margin-bottom: 36px;
+  margin-bottom: 35px;
 }
 
 .card__list {
@@ -177,7 +184,7 @@ section {
 .card__item {
   position: relative;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 18px;
   text-decoration-line: underline;
   color: #49424B;
 }
@@ -197,6 +204,9 @@ section {
 }
 
 .card__link-btn {
+  position: absolute;
+  left: 35px;
+  bottom: 53px;
   font-size: 15px;
   line-height: 18px;
   color: #433D45;
@@ -208,6 +218,62 @@ section {
 
 .card__img {
   max-width: 125px;
+}
+
+.form {
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin: 50px auto;
+  width: 400px;
+  padding: 30px;
+  color: #000;
+}
+
+.form-label {
+  display: flex;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.js-validate-error-label {
+  position: absolute;
+  right: 5px;
+  top: 100%;
+}
+
+.form-label span {
+  flex-grow: 1;
+  display: inline-block;
+}
+
+.form-label input:not([type="file"]) {
+  border: none;
+  border-bottom: 1px solid #000;
+  border-radius: 0;
+}
+
+.form-label input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.file-label span {
+  border: 1px solid #000;
+  display: inline-block;
+  padding: 5px 10px;
+  flex-grow: 0;
+  cursor: pointer;
+}
+
+.form button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 5px 15px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 @media (max-width: 991px) {
