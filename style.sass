@@ -1,0 +1,223 @@
+
+*,
+*::before,
+*::after
+
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body
+
+  font-family: 'Roboto', sans-serif
+  font-weight: 400
+  font-size: 23px
+  font-style: normal
+  line-height: 27px
+  color: #fff
+body.lock
+  overflow: hidden
+
+a
+  display: inline-block
+  color: #111211
+  text-decoration: none
+
+a:hover
+  color: #0a0a0a
+  text-decoration: none
+
+h1, h2, h3, h4, h5, h6
+  font-family: 'Montserrat', sans-serif
+  font-weight: 400
+h2
+  font-size: 43px
+  line-height: 52px
+  color: #49424B
+  text-align: center
+  margin-bottom: 88px
+h3
+  font-weight: 700
+  font-size: 21px
+  line-height: 26px
+  color: #FFFFFF
+img
+  max-width: 100%
+section
+  padding: 100px 0
+.container
+  max-width: 1470px
+  padding: 0 15px
+  margin: 0 auto
+
+.logo
+  text-transform: uppercase
+.header
+
+  background: #82CB5D
+.header__list
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 40px 0
+
+.logo__link
+  display: flex
+  align-items: center
+.logo__img
+  display: inline-block
+.hero
+
+  background: #49424B
+  background-image: url('../img/hero-bg.png')
+  background-size: contain
+  background-position: top right
+  background-repeat: no-repeat
+  //  background-size: contain
+//.hero__inner
+//  display: flex
+//.hero__bg
+ // width: 50%
+.hero__content
+  width: 50%
+  padding-top: 84px
+  padding-bottom: 46px
+.hero__title
+  max-width: 590px
+  font-family: Montserrat
+  font-style: normal
+  font-weight: 400
+  font-size: 50px
+  line-height: 61px
+  margin-bottom: 44px
+
+.hero__discr
+  max-width: 385px
+  font-size: 23px
+  line-height: 27px
+  color: #F7FAFB
+  margin-bottom: 50px
+.hero__link
+  display: inline-block
+  padding: 16px 45px
+  background: #82CE5A
+  border-radius: 15px
+  color: #FFFFFF
+  transition: all 0.5s
+.servises
+  background-image: url('../img/servises-bg.png')
+  background-size: cover
+  background-repeat: no-repeat
+.container
+
+.servises__tittle
+
+.servises__cards
+  display: flex
+  flex-wrap: wrap
+.servises__cards
+
+.servises__card
+  display: flex
+  background: #82CB5D
+  max-width: 678px
+  min-height: 430px
+  padding: 36px 35px 53px
+  align-items: start
+  margin-bottom: 40px
+.servises__card:nth-child(odd)
+  margin-right: 80px
+.servises__card-content
+  display: flex
+  flex-direction: column
+  align-items: start
+  max-width: 415px
+.card__title
+  font-family: 'Montserrat', sans-serif
+  font-weight: 700
+  font-size: 21px
+  line-height: 26px
+  color: #FFFFFF
+  margin-bottom: 36px
+.card__list
+  list-style: none
+.card__item
+  position: relative
+  font-size: 16px
+  line-height: 19px
+  text-decoration-line: underline
+  color: #49424B
+.card__item + .card__item
+
+  margin-top: 19px
+
+.card__item::before
+  content: ''
+  height: 5px
+  width: 5px
+  border-radius: 50%
+  color: #FFF
+  top: 50%
+  left: 0
+.card__link-btn
+  font-size: 15px
+  line-height: 18px
+  color: #433D45
+  background: #F7FAFB
+  border-radius: 15px
+  padding: 17px 22px
+  margin-top: 37px
+
+.card__img
+  max-width: 125px
+
+@media(max-width: 991px)
+
+  .header__list
+    display: none
+  .header__list.active
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: #e2b7ce
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    z-index: 10
+
+  .toggle
+    position: fixed
+    top: 40px
+    right: 40px
+    width: 30px
+    height: 30px
+    background: #e2b7ce url(../img/close.png)
+    background-size: 30px
+    background-repeat: no-repeat
+    background-position: center
+    cursor: pointer
+    z-index: 1000
+    border: none
+  .toggle.active
+    display: block
+    position: fixed
+    top: 40px
+    right: 40px
+    background: #e2b7ce url(../img/menu.png)
+    background-size: 25px
+    background-repeat: no-repeat
+    background-position: center
+    cursor: pointer
+    z-index: 1000
+    border: none
+
+  .contact__inner
+    flex-direction: column
+  .contact__map
+    width: 100%
+    height: 50vh
+  .contact__content
+    margin-bottom: 20px
