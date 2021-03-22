@@ -75,6 +75,7 @@
               Заказать звонок
             </a>
           </div>
+
         </div>
       </div>
     </section>
@@ -201,12 +202,153 @@
         </div>
       </div>
     </section>
+    <section class="form_section">
+      <div class="container">
+        <form action="mail.php" enctype="multipart/form-data" class="form" method="POST">
+
+
+          <!--  <input type="hidden" name="admin_email[]" value="maxgraph23@gmail.com">-->
+
+          <!--  Почта, на которую будут приходить письма, можно указать здесь,
+    но лучше в mail.php-->
+          <input type="hidden" name="form_subject" value="Тема письма">
+          <h2>Отправка формы</h2>
+          <label class="form-label">
+            <span>Введите имя</span>
+            <input type="text" data-validate-field="name" name="name">
+          </label>
+          <label class="form-label">
+            <span>Введите телефон</span>
+            <input type="tel" data-validate-field="tel" name="tel">
+          </label>
+          <label class="form-label">
+            <span>Введите email</span>
+            <input type="email" data-validate-field="email" name="email">
+          </label>
+          <label class="message">
+            <span>Сообщение</span>
+            <textarea name="message" id="text"></textarea>
+          </label>
+
+
+
+
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+    </section>
+
+
+
+    <section class="advantages">
+      <div class="container">
+        <div class="advantages__inner">
+          <div class="advantages__title">Наши преимущества</div>
+          <div class="advantages__wrap">
+            <div class="advantages__list">
+              <div class="advantages__item">
+                <img src="img/advantages-1.png" alt="" class="advantages__img">
+                <div class="advantages__item-text">Надёжность</div>
+              </div>
+              <div class="advantages__item">
+                <img src="img/advantages-2.png" alt="" class="advantages__img">
+                <div class="advantages__item-text">Качество</div>
+              </div>
+              <div class="advantages__item">
+                <img src="img/advantages-3.png" alt="" class="advantages__img">
+                <div class="advantages__item-text">Отработка огромного количества
+                  различных задач</div>
+              </div>
+              <div class="advantages__item">
+                <img src="img/advantages-4.png" alt="" class="advantages__img">
+                <div class="advantages__item-text">Полный цикл услуг по охране труда</div>
+              </div>
+            </div>
+            <img src="img/arrow.png" alt="" class="advantages__arrow">
+            <div class="advantages__text">
+              Наша главная задача состоит в постоянном совершенствовании как самой компании,
+              так и ее сотрудников, чьи знания и профессиональнй рост являются нашим достоинством и опорой.
+              Наш главный принцип – это профессионализм и высокое качество оказываемых услуг.
+              Мы следуем своему принципу, укрепляя Ваше доверие к надежности и качеству Наших услуг.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="container">
+        <div class="contact__inner">
+          <div class="contact__title">
+            Наши контакты
+          </div>
+          <div class="contact__wrap">
+            <img src="img/ohrana_truda.png" alt="" class="contact__content-images">
+            <div class="contact__content">
+              <div class="contact__content-title">
+                Если возникли вопросы, свяжитесь с нами:
+              </div>
+
+              <ul class="contact__list">
+                <li class="contact__item">
+                  <img src="img/map.png" alt="" class="contact__item-icon">
+                  <div class="contact__item-text"><span class="contact__item-text__bold">Юридический адрес:</span><br>
+                    г. Москва, ул. Полянка, дом 2, эт. 1 пом. XLVIII, ком. 16.<br>
+                    <span class="contact__item-text__bold">Фактический адрес:</span><br>
+                    г. Москва, Щелковское шоссе, д. 100, к.1, офис 3014
+                  </div>
+                </li>
+                <li class="contact__item">
+                  <img src="img/email.png" alt="" class="contact__item-icon">
+                  <div class="contact__item-text"><span class="contact__item-text__bold">E-mail:</span><a
+                      href="mailto:info@ros-ot.ru">info@ros-ot.ru</a>
+                  </div>
+                </li>
+                <li class="contact__item">
+                  <img src="img/phone.png" alt="" class="contact__item-icon">
+                  <div class="contact__item-text"><span class="contact__item-text__bold">Телефон:</span> <a
+                      href="tel:84996496269">8(499)649-62-69</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="contact__map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2241.917134264499!2d37.831965315932884!3d55.81203898056924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b534accba0001d%3A0xf240b781c6762b86!2z0KnRkdC70LrQvtCy0YHQutC-0LUg0YguLCAxMDAg0LrQvtGA0L_Rg9GBIDEsIDMwMTQsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMDU0ODQ!5e0!3m2!1sru!2sua!4v1616166194207!5m2!1sru!2sua"
+                style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" width="100%" height="500px"
+                frameborder="0"></iframe>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="partners">
+      <div class="container">
+        <div class="partners__inner">
+          <div class="partners__title">Нам доверяют</div>
+          <div class="partners__items">
+            <img src="img/partner_ 1.png" alt="" class="partner__item">
+            <img src="img/partner_ 2.png" alt="" class="partner__item">
+            <img src="img/partner_ 3.png" alt="" class="partner__item">
+            <img src="img/partner_ 4.png" alt="" class="partner__item">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
   </main>
   <footer class="footer">
     <div class="container">
-
+      <div class="footer__inner">
+        <div class="footer__name">2020 © “PОСТЦОТ”</div>
+        <div class="footer__text">Любое использование материалов, размещенных на сайте без разрешения владельцев –
+          запрещено авторскими правами.</div>
+      </div>
     </div>
   </footer>
+
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/main.js"></script>
