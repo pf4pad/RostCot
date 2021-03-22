@@ -4,11 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+
+
+  <!-- Google Fonts -->
+
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/slick.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style_v3.css">
   <title>РОСТЦОТ</title>
 </head>
 
@@ -54,19 +59,22 @@
               </a>
             </li>
             <li class="header__item">
-              <a href="" class="header__link">
+              <a href="tel:84996496269" class="header__link">
                 8-499-649-62-69
               </a>
             </li>
           </ul>
+        </nav>
   </header>
   <main>
     <section class="hero">
       <div class="container">
         <div class="hero__inner">
+
           <div class="hero__content">
             <h1 class="hero__title">
-              Безопасность рабочего места, залог успешного бизнеса
+              <span class="hero__title-green"> Безопасность</span> рабочего места,<span class="hero__title-green">залог
+              </span>успешного бизнеса
             </h1>
             <p class="hero__discr">
               «РОСТЦОТ» предоставляет услуги в области охраны труда и безопасности.
@@ -87,6 +95,7 @@
         <div class="servises__cards">
           <div class="servises__card">
             <div class="servises__card-content">
+
               <h3 class="card__title">
                 Охрана труда
               </h3>
@@ -100,7 +109,10 @@
               </ul>
               <a href="" class="card__link-btn">Посмотреть подробнее</a>
             </div>
+
             <img src="img/Servises/card1.svg" alt="card1" class="card__img">
+
+
           </div>
           <div class="servises__card">
             <div class="servises__card-content">
@@ -212,23 +224,25 @@
           <!--  Почта, на которую будут приходить письма, можно указать здесь,
     но лучше в mail.php-->
           <input type="hidden" name="form_subject" value="Тема письма">
-          <h2>Отправка формы</h2>
-          <label class="form-label">
-            <span>Введите имя</span>
-            <input type="text" data-validate-field="name" name="name">
-          </label>
-          <label class="form-label">
-            <span>Введите телефон</span>
-            <input type="tel" data-validate-field="tel" name="tel">
-          </label>
-          <label class="form-label">
-            <span>Введите email</span>
-            <input type="email" data-validate-field="email" name="email">
-          </label>
-          <label class="message">
+          <h2 class="form__title">Оставить заявку</h2>
+          <p>
+            <input data-validate-field="name" type="text" class="text-input" id="name" name="name" required>
+            <label for="name" class="input-label">Ваше имя</label>
+          </p>
+
+          </p>
+          <p>
+            <input type="tel" data-validate-field="tel" class="text-input" id="phone" name="phone" required>
+            <label for="phone" class="input-label">Введите телефон</label>
+          </p>
+          <p>
+            <input class="text-input" type="email" data-validate-field="email" name="email" id="emai" required>
+            <label for="email" class="input-label">Введите e-mail</label>
+          </p>
+          <div class="message">
             <span>Сообщение</span>
-            <textarea name="message" id="text"></textarea>
-          </label>
+            <textarea class="message__textarea" name="message" id="text"></textarea>
+          </div>
 
 
 
@@ -248,29 +262,29 @@
             <div class="advantages__list">
               <div class="advantages__item">
                 <img src="img/advantages-1.png" alt="" class="advantages__img">
-                <div class="advantages__item-text">Надёжность</div>
+                <span class="advantages__item-text">Надёжность</span>
               </div>
               <div class="advantages__item">
                 <img src="img/advantages-2.png" alt="" class="advantages__img">
-                <div class="advantages__item-text">Качество</div>
+                <span class="advantages__item-text">Качество</span>
               </div>
               <div class="advantages__item">
                 <img src="img/advantages-3.png" alt="" class="advantages__img">
-                <div class="advantages__item-text">Отработка огромного количества
-                  различных задач</div>
+                <span class="advantages__item-text">Отработка огромного количества
+                  различных задач</span>
               </div>
               <div class="advantages__item">
                 <img src="img/advantages-4.png" alt="" class="advantages__img">
-                <div class="advantages__item-text">Полный цикл услуг по охране труда</div>
+                <span class="advantages__item-text">Полный цикл услуг по охране труда</span>
               </div>
             </div>
             <img src="img/arrow.png" alt="" class="advantages__arrow">
-            <div class="advantages__text">
+            <p class="advantages__text">
               Наша главная задача состоит в постоянном совершенствовании как самой компании,
               так и ее сотрудников, чьи знания и профессиональнй рост являются нашим достоинством и опорой.
               Наш главный принцип – это профессионализм и высокое качество оказываемых услуг.
               Мы следуем своему принципу, укрепляя Ваше доверие к надежности и качеству Наших услуг.
-            </div>
+            </p>
           </div>
         </div>
       </div>
@@ -279,12 +293,14 @@
     <section class="contact">
       <div class="container">
         <div class="contact__inner">
+
           <div class="contact__title">
             Наши контакты
           </div>
           <div class="contact__wrap">
-            <img src="img/ohrana_truda.png" alt="" class="contact__content-images">
+
             <div class="contact__content">
+              <img src="img/ohrana_truda.png" alt="" class="contact__content-images">
               <div class="contact__content-title">
                 Если возникли вопросы, свяжитесь с нами:
               </div>
@@ -342,16 +358,20 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
-        <div class="footer__name">2020 © “PОСТЦОТ”</div>
-        <div class="footer__text">Любое использование материалов, размещенных на сайте без разрешения владельцев –
-          запрещено авторскими правами.</div>
+        <span class="footer__name">2020 © “PОСТЦОТ”</span>
+        <p class="footer__text">Любое использование материалов, размещенных на сайте без разрешения владельцев –
+          запрещено авторскими правами.</p>
       </div>
     </div>
   </footer>
+  <div class="fixedbut">
+    <a href="tel:84996496269" class="header__link">
+      <img src="img/phone-call.png" alt="phone">
+    </a>
+  </div>
 
-  <script src="js/jquery-3.5.1.min.js"></script>
-  <script src="js/slick.min.js"></script>
   <script src="js/main.js"></script>
+
 </body>
 
 </html>
