@@ -1,9 +1,11 @@
  
-   
-     function toggleMenu(params) {
+      const menuToggle = document.querySelector('.toggle');
+      const navugation = document.querySelector('.header__list');
+     
+     
+       function toggleMenu(params) {
 
-       const menuToggle = document.querySelector('.toggle');
-       const navugation = document.querySelector('.header__list');
+       
 
        menuToggle.classList.toggle('active');
        document.body.classList.toggle('lock');
@@ -25,11 +27,12 @@ if (menuLinks.length > 0) {
 const gotoBlock = document.querySelector(menuLink.dataset.goto);
 const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
 
-        if(menuToggle.classList('active')){
-          menuToggle.classList.remove('active');
-       document.body.classList.remove('lock');
+      if (navugation.classList.contains('active')) {
+        menuToggle.classList.toggle('active');
        navugation.classList.remove('active');
-        }
+      document.body.classList.remove('lock');
+      };
+      
 
     window.scrollTo({
 top: gotoBlockValue,
@@ -37,14 +40,15 @@ behavior: "smooth"
 
 
     });
+    
     e.preventDefault();
 
     }
   }
-}
+};
 
 let selector = document.querySelectorAll('input[type="tel"]'); // маска для телефона
-let im = new Inputmask('+38 (999) 999-99-99');
+let im = new Inputmask('+7 (999) 999-99-99');
 im.mask(selector);
 
 let selector2 = document.querySelector('input[type="tel"]');
@@ -62,19 +66,6 @@ selector2.addEventListener('input', function(){
 	
 });
 
-const fileInput = document.querySelector('input[type="file"]');
-
-fileInput.addEventListener('change', (e) => {
-	let files = e.currentTarget.files;
-	console.log(files);
-
-	if (files.length) {
-		fileInput.closest('label').querySelector('span').textContent = files[0].name;
-	} else {
-		fileInput.closest('label').querySelector('span').textContent = 'Прикрепить файл';
-	}
-
-});
 
 let validateForms = function(selector, rules, messages, successModal, yaGoal) {
 	new window.JustValidate(selector, {
