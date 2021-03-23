@@ -3,7 +3,7 @@
 // и адрес, куда будут приходить письма -- Your best site --
 
 let selector = document.querySelectorAll('input[type="tel"]'); // маска для телефона
-let im = new Inputmask('+38 (999) 999-99-99');
+let im = new Inputmask('+7 (999) 999-99-99');
 im.mask(selector);
 
 let selector2 = document.querySelector('input[type="tel"]');
@@ -21,19 +21,6 @@ selector2.addEventListener('input', function(){
 	
 });
 
-const fileInput = document.querySelector('input[type="file"]');
-
-fileInput.addEventListener('change', (e) => {
-	let files = e.currentTarget.files;
-	console.log(files);
-
-	if (files.length) {
-		fileInput.closest('label').querySelector('span').textContent = files[0].name;
-	} else {
-		fileInput.closest('label').querySelector('span').textContent = 'Прикрепить файл';
-	}
-
-});
 
 let validateForms = function(selector, rules, messages, successModal, yaGoal) {
 	new window.JustValidate(selector, {
@@ -59,7 +46,7 @@ let validateForms = function(selector, rules, messages, successModal, yaGoal) {
 
 			form.reset();
 
-			fileInput.closest('label').querySelector('span').textContent = 'Прикрепить файл';
+			
 		}
 	});
 }

@@ -50,6 +50,31 @@ img
   padding: 0 15px
   margin: 0 auto
 
+.fixedbut
+  position: fixed
+  bottom: 20px
+  right: 20px
+  display: block
+  border-radius: 50%
+  z-index: 100
+  width: 64px
+  height: 64px
+  background: #ffffff
+  animation: animate 3s linear infinite
+
+  &:hover
+    background: #95afe7
+
+@keyframes animate
+  0%
+    transform: scale(0.8)
+
+  50%
+    transform: scale(1)
+
+  100%
+    transform: scale(0.8)
+
 .logo
   text-transform: uppercase
 
@@ -70,17 +95,9 @@ img
   display: inline-block
 
 .hero
-  background: #49424B
-
-  &__inner
-    display: flex
-    background-image: url("../img/hero-bg1.png")
-    background-repeat: no-repeat
-    background-position: top right
-    background-size: contain
-
-  &__bg
-    height: 630px
+  background: linear-gradient(90deg, #49424B -2.88%, rgba(1, 2, 2, 0.6) 80%), url('../img/hero-bg2.png') top right
+  background-repeat: no-repeat
+  background-size: cover
 
   &__content
     width: 100%
@@ -89,12 +106,15 @@ img
 
   &__title
     max-width: 590px
-    font-family: Montserrat
+    font-family: 'Montserrat', sans-serif
     font-style: normal
     font-weight: 400
     font-size: 50px
     line-height: 61px
     margin-bottom: 44px
+
+  &__title-green
+    color: #82CE5A
 
   &__discr
     max-width: 385px
@@ -194,48 +214,72 @@ img
   border: 1px solid #000
   border-radius: 10px
   margin: 50px auto
-  width: 400px
+  max-width: 600px
   padding: 30px
   color: #000
 
-  &-label
-    display: flex
-    margin-bottom: 20px
+  &__title
+    margin-bottom: 50px
+
+  & p
     position: relative
+    margin: 0
+    margin-bottom: 24px
+
+.text-input
+  display: block
+  padding-top: 10px
+  padding-bottom: 5px
+  width: 100%
+  border: none
+  border-bottom: 1px solid black
+  background-color: transparent
+  color: #49424B
+  font-size: 21px
+  margin: 30px 0
+  outline: none
+
+// .text-input:focus+.input-label,
+//
+ // &:valid:not(:placeholder-shown)+.input-label
+ //   bottom: 40px
+ //   transition: 0.2s ease-in
+
+.input-label
+  position: absolute
+  bottom: 40px
+  left: 0
+  transition: 0.2s ease-in
+  color: #ccc
 
 .js-validate-error-label
   position: absolute
   right: 5px
   top: 100%
+.message__title
+  color: #ccc
+.message
 
-.form-label span
-  flex-grow: 1
-  display: inline-block
+  display: block
+  margin-bottom: 25px
 
-.form-label input:not([type="file"])
-  border: none
-  border-bottom: 1px solid #000
-  border-radius: 0
-
-.form-label input[type="file"]
-  position: absolute
-  width: 1px
-  height: 1px
-  opacity: 0
-
-.file-label span
-  border: 1px solid #000
-  display: inline-block
-  padding: 5px 10px
-  flex-grow: 0
-  cursor: pointer
+  &__textarea
+    font-family: inherit
+    font-size: inherit
+    line-height: inherit
+    width: 100%
+    resize: vertical
+    min-height: 100px
+    padding: 10px
 
 .form button
-  background-color: #000
-  color: #fff
   border: none
-  padding: 5px 15px
-  font-size: 16px
+  padding: 16px 45px
+  background: #82CE5A
+  border-radius: 15px
+  font-size: 23px
+  color: #FFFFFF
+  transition: all 0.5s
   cursor: pointer
 
 .advantages__title
@@ -250,20 +294,26 @@ img
 .advantages__wrap
   height: 632px
   background: #49424B
+  padding: 20px
 
 .advantages__list
   display: flex
   justify-content: space-around
-  align-items: center
+  align-items: start
   text-align: center
 
 .advantages__item
+  display: flex
+  flex-direction: column
+  align-items: center
   width: 23%
-  font-size: 18px !important
-  line-height: 21px !important
+  font-size: 18px
+  line-height: 21px
 
 .advantage__item-text
   font-family: 'Roboto', sans-serif
+  font-size: 18px
+  line-height: 21px
 
 .advantages__arrow
   margin-left: 50%
@@ -274,13 +324,12 @@ img
 
 .advantages__text
   font-family: 'Roboto', sans-serif
-  Width: 864px
-  Height: 91px
-  font-size: 18px !important
+  font-size: 18px
   line-height: 21px
   margin-bottom: 87px
   margin: 0 auto
   position: relative
+  max-width: 864px
 
   &:after
     content: ''
@@ -377,7 +426,7 @@ img
   color: #FFFFFF
 
   &__inner
-    max-height: 96px
+    max-height: auto
     background: #82CB5D
     padding: 22px 26px 16px 79px
     display: flex
@@ -531,7 +580,8 @@ img
     top: 0
     width: 100%
     height: 100%
-    background: #e2b7ce
+    background: #64505b
+    color: #fff
     display: flex
     flex-direction: column
     justify-content: center
@@ -544,7 +594,7 @@ img
     right: 40px
     width: 30px
     height: 30px
-    background: #e2b7ce url(../img/close.png)
+    background: #49424B url(../img/close.png)
     background-size: 30px
     background-repeat: no-repeat
     background-position: center
@@ -557,7 +607,7 @@ img
     position: fixed
     top: 40px
     right: 40px
-    background: #e2b7ce url(../img/menu.png)
+    background: #49424B url(../img/menu.png)
     background-size: 25px
     background-repeat: no-repeat
     background-position: center
@@ -565,11 +615,14 @@ img
     z-index: 1000
     border: none
 
+  .header__link
+    color: #fff
+    font-size: 26px
+    margin: 15px
+
   .servises__card
 
     min-height: 500px
-  .advantages__text
-    width: 700px
 
   .contact__wrap
     flex-wrap: wrap
@@ -598,83 +651,154 @@ img
     line-height: 41px
     margin-bottom: 24px
 
-  .hero__content
-    margin-top: 100px
+.hero__content
+  margin-top: 100px
 
-  .hero__inner
+// .hero__inner {
 
-    background-image: url("../img/hero-bg1.png")
-    background-repeat: repeat
+// background-image: url("../img/hero-bg1.png");
+// background-repeat: repeat;
 
-    background-size: cover
-    height: 540px
+// background-size: cover;
+// height: 540px;
 
-  .herow__wrap
-    background: rgba(58, 58, 58, 0.6)
-    width: 100%
+.servises
+  padding-top: 40px
 
-  .servises
-    padding-top: 40px
-
-    &__card
-      width: 80%
-      min-height: 500px
-      padding-left: 30px
-      padding-top: 30px
-      align-items: start
-      margin-bottom: 30px
-
-    &__cards
-      justify-content: space-between
-      margin-left: 100px
-
-  .advantages__wrap
-    padding-top: 30px
-    height: auto
-    padding-bottom: 50px
+  &__card
+    width: 80%
+    min-height: 500px
     padding-left: 30px
-    padding-right: 30px
+    padding-top: 30px
+    align-items: start
+    margin-bottom: 30px
+
+  &__cards
+    justify-content: space-between
+    margin-left: 100px
+
+.card__link-btn
+  position: initial
+
+.advantages__wrap
+  padding-top: 30px
+  height: auto
+  padding-bottom: 50px
+  padding-left: 30px
+  padding-right: 30px
+
+.advantages__list
+  flex-wrap: wrap
+
+.advantages__item
+  width: 47%
+
+  &-text
+    font-size: 18px
+    line-height: 21px
+
+.advantages__text
+  font-family: 'Roboto', sans-serif
+  font-size: 18px
+  line-height: 22px
+  margin-bottom: 87px
+
+.partners__inner
+  padding-top: 40px
+
+.partners__title, .contact__title, .advantages__title, .servises__tittle
+  font-size: 30px
+  line-height: 36px
+  margin-bottom: 42px
+  margin-top: 40px
+
+.partner__items
+  flex-wrap: wrap
+  justify-content: space-around
+
+.partner__item
+  width: 40%
+  padding-bottom: 30px
+
+.footer__inner
+  padding-left: 30px
+
+.footer__text, .footer__name
+
+  width: 500px
+  font-size: 16px
+  line-height: 20px
+
+@media (max-width: 576px)
+
+  .servises__cards
+
+    margin: 5px
+    padding: 5px
+
+  .servises__card
+    flex-direction: column
+    align-items: left
+    justify-content: start
+    width: 100%
+    padding: 0 20px
+    height: auto
+
+  .card__img
+    order: -1
+
+  .servises__card:nth-child(2n+1)
+    margin-right: 0
+
+  .card__title
+    margin-bottom: 25px
+
+  .card__link-btn
+    position: initial
+    margin-top: 20px
+    margin-bottom: 15px
 
   .advantages__list
-    flex-wrap: wrap
+    flex-direction: column
+    align-items: center
 
   .advantages__item
-    width: 47%
-    font-size: 18px !important
-    line-height: 21px !important
+    width: 100%
 
-  .advantages__text
-    font-family: 'Roboto', sans-serif
-    Width: 564px
-    Height: 91px
-    font-size: 14px !important
-    line-height: 18px
-    margin-bottom: 87px
-    margin: 0 auto
-    position: relative
+.advantages__item-text
+  font-size: 24px
+  line-height: 28px
+
+  .contact__content
+    padding: 15px 15px
 
   .partners__inner
-    padding-top: 40px
+    padding: 50px 15px 30px 15px
 
-  .partners__title, .contact__title, .advantages__title, .servises__tittle
-    font-size: 30px
-    line-height: 36px
-    margin-bottom: 42px
-    margin-top: 40px
+  .partners__items
+    flex-direction: column
 
-  .partner__items
-    flex-wrap: wrap
-    justify-content: space-around
+.footer__inner
+  flex-direction: column
+  padding: 0 15px
 
-  .partner__item
-    width: 40%
-    padding-bottom: 30px
+  .footer__name
+    text-align: center
+    margin: 15px 0
 
-  .footer__inner
-    padding-left: 30px
+  .footer__text
+    max-width: 100%
 
-  .footer__text, .footer__name
+@media (max-width: 375px)
+  .footer-mail
+    font-size: 20px
 
-    width: 500px
-    font-size: 16px
-    line-height: 20px
+  .logo
+    width: 65%
+
+  .hero-title
+    font-size: 45px
+    line-height: 60px
+
+  .services-list
+    grid-template-columns: repeat(1, 1fr)
