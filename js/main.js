@@ -12,15 +12,7 @@
      };
 
 
-     $(function(){
-   $('.slider').slick({
-     dots: false,
-       infinite: true,
-      speed: 1500,
-      autoplay: true,
-       arrows: false    
-  });
- });
+    
   
 const menuLinks = document.querySelectorAll('.header__link[data-goto]');
 if (menuLinks.length > 0) {
